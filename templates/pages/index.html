@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width,intial-scale=1">
+    <title>Welcome to Gemy web</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="box" onclick="location.href='soon';" style="cursor:pointer;">
+    <div class="imgBx">
+        <img src="{% static 'image/sports-tools_53876-138077.jpg'%}">
+    </div>
+    <div class="content">
+        <h2>User<br><span>Our beloved Customers</span></h2>
+    </div>
+    </div>
+    <div class="box" onclick="location.href='members/login_user';" style="cursor:pointer;">
+    <div class="imgBx">
+        <img src="{% static 'image/analytics.jpg'%}">
+    </div>
+    <div class="content">
+        <h2>Dashboard<br><span>Data Analytics</span></h2>
+    </div>
+    </div>
+    <div class="box" onclick="location.href='admin/';" style="cursor:pointer;">
+    <div class="imgBx">
+        <img src="{% static 'image/lighbulbs.jpg'%}">
+    </div>
+    <div class="content">
+        <h2>Admin<br><span>Employees page</span></h2>
+    </div>
+    </div>
+</body>
+{% endblock content %}
+

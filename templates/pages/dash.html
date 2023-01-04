@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'boot/css/bootstrap.css' %}">
+<br/><br/>
+<h1>Renew Calculator</h1>
+<br/><br/><br/><br/><br/>
+<h3>
+    Price Calculated for this player: 
+    <small class="text-danger">{{add}}</small>
+  </h3>
+  <br/><br/><br/>
+<form method=POST>
+    {% csrf_token %}
+        <div class="form-group">
+          <label>Player Name</label>
+          <br/>
+          <input type="text" class="form-control" name="playername" placeholder="Enter Player ">
+        </div>
+        <br/><br/><br/>
+    <input type="submit" value="Save" class="btn btn-secondary" style="background-color: black;">
+<br/>
+</form>
+<br/>
+{% endblock content %}

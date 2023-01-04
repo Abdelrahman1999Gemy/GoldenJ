@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'boot/css/bootstrap.css' %}">
+<br/><br/>
+<h1>Login</h1>
+<br/><br/>
+<form action="" method=POST>
+    {% csrf_token %}
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">User Name</label>
+          <input type="text" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <br/>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <br/><br/><br/>
+    <input type="submit" value="Submit" class="btn btn-secondary" style="background-color: black;">
+</form>
+<br/>
+{% endblock content %}
